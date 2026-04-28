@@ -19,9 +19,10 @@ daily_gaming_hours = st.slider("Daily Gaming Hours", 0.0, 24.0, 2.0, 0.5)
 
 gender = st.radio("Gender", list(mappings["gender"].values()),horizontal=True)
 
-genre = st.selectbox("Game Genre", list(mappings["game_genre"].values()))
-game = st.selectbox("Primary Game", list(mappings["primary_game"].values()))
-platform = st.selectbox("Platform", list(mappings["gaming_platform"].values()))
+platform = st.selectbox("What Gaming Platform Do You Use?", list(mappings["gaming_platform"].values()))
+genre = st.selectbox("What Game Genre Do You Most Often Play?", list(mappings["game_genre"].values()))
+game = st.selectbox("What Is Your Primary Game?", list(mappings["primary_game"].values()))
+
 
 if st.button("Predict"):
     input_data = np.array([[
